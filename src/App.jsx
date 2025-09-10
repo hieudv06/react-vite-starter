@@ -3,8 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+//() => {} viết theo arrow function
+const App = () =>{
+// function App (){
   const [count, setCount] = useState(0)
+
+  // function myFunction(){
+  // console.log(">> Run my arrow function")
+  //  }
+
+
+  const myFunction = () =>{
+    console.log(">> Run my arrow function")
+  }
+
+  myFunction();
+
+
 
   return (
     <>
