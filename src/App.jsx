@@ -7,14 +7,20 @@ import reactLogo from "./assets/react.svg"
 
 const App = () =>{
 
-  const name = "Arsenal";
+  const hieudv = "Arsenal";
   const age =25;
   const data ={
     address: "hanoi",
     country: "VietNam"
   }
-
   //{key:value}
+
+  // tao function 
+  const addNewTodo = (name) =>{
+    alert(`call me ${name}`)
+  }
+
+
 
 
 
@@ -22,9 +28,11 @@ const App = () =>{
     <div className="todo-container">  
     <div className="todo-title">Todo List</div>
    
-    <TodoNew/>
+    <TodoNew
+    addNewTodo ={addNewTodo}
+    />
     <TodoData
-    name ={name}
+    name ={hieudv}
     age ={age}
     data={data}
     />
