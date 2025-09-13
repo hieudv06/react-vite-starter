@@ -7,7 +7,7 @@ const TodoData = (props) => {
       // props.name
       //props.age
 
-      console.log(">>> Check props: ",props)
+      console.log(">>> Check props----: ",props)
 
 
     return(
@@ -17,11 +17,8 @@ const TodoData = (props) => {
       <div>My name is {name}</div>
        <div> Age is {age}</div>
        <div> data is {JSON.stringify(data)}</div>
-       <div> data Todo List {JSON.stringify(todoList)}</div>
-
+       <div> data is {JSON.stringify(todoList)}</div>
        
-    
-
     
     </div>
 

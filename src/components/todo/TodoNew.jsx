@@ -12,11 +12,12 @@ const TodoNew = (props) =>{
   // addNewToDo()  // fire
   const handleClick =  () =>{
     console.log(">>>> check valueInput : ",valueInput)
+    // gọi hàm đến thằng cha (app )
+    addNewTodo(valueInput)
   }
 
   const handleOnChange = (name) =>{
-    console.log(">>> handleOnChange",name)
-    setValueInput(name)
+    setValueInput(name) 
   }
 
   // addNewTodo("hieudv");
