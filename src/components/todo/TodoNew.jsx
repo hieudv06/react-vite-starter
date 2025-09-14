@@ -1,40 +1,41 @@
-import { useState } from "react"
+import { useState } from "react";
 
-const TodoNew = (props) =>{
-
-
+const TodoNew = (props) => {
   //useState. hook
   // const valueInput = "hieudv"
-  const [valueInput,setValueInput] = useState("hieudv")
+  const [valueInput, setValueInput] = useState("hieudv");
 
-  const {addNewTodo} = props
+  const { addNewTodo } = props;
 
   // addNewToDo()  // fire
-  const handleClick =  () =>{
-    console.log(">>>> check valueInput : ",valueInput)
+  const handleClick = () => {
+    console.log(">>>> check valueInput : ", valueInput);
     // gọi hàm đến thằng cha (app )
-    addNewTodo(valueInput)
-  }
+    addNewTodo(valueInput);
+    // sau khi lấy giá trị sẽ xóa ở ô input
+    setValueInput("");
+  };
 
-  const handleOnChange = (name) =>{
-    setValueInput(name) 
-  }
+  const handleOnChange = (name) => {
+    setValueInput(name);
+  };
 
   // addNewTodo("hieudv");
 
-    return(
-        <div className='todo-new'>
-      <input type="text"
-        onChange={(event) =>handleOnChange(event.target.value)}
-
+  return (
+    <div className="todo-new">
+      <input
+        type="text"
+        onChange={(event) => handleOnChange(event.target.value)}
+        // kiểm soát giá trị của ô input
+        value={valueInput}
       />
-      <button
-      style={{cusor: "pointer"}}
-      onClick={handleClick}
-      >Add</button>
+      <button style={{ cusor: "pointer" }} onClick={handleClick}>
+        Add
+      </button>
       <div>My text input is = {valueInput}</div>
     </div>
-    )
-}
+  );
+};
 
 export default TodoNew;

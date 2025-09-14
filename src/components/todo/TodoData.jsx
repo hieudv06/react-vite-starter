@@ -1,27 +1,28 @@
 const TodoData = (props) => {
+  // cach viet 1
+  const { todoList } = props;
+  //cach viet 2 :
+  // props.name
+  //props.age
 
+  console.log(">>> Check props----: ", props);
 
-      // cach viet 1
-      const {name,age,data,todoList} = props;
-      //cach viet 2 : 
-      // props.name
-      //props.age
+  return (
+    <div className="todo-data">
+      {todoList.map((item, index) => {
+        console.log("Check item", item, index);
 
-      console.log(">>> Check props----: ",props)
-
-
-    return(
-           <div className='todo-data'>
+        return (
+          <div className="todo-item">
+            {item.name}
+            <button>Delete</button>
+          </div>
+        );
+      })}
       <div>Learning React</div>
       <div>Watching Youtube</div>
-      <div>My name is {name}</div>
-       <div> Age is {age}</div>
-       <div> data is {JSON.stringify(data)}</div>
-       <div> data is {JSON.stringify(todoList)}</div>
-       
-    
+      <div> data is {JSON.stringify(todoList)}</div>
     </div>
-
-    )
-}
+  );
+};
 export default TodoData;
